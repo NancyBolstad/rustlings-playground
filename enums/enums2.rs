@@ -3,13 +3,11 @@
 
 #[derive(Debug)]
 enum Message {
-    Move {
-        x: i32,
-        y: i32,
-    },
+    // TODO: define the different variants used below
+    Move { x: i32, y: i32 },
     Echo(String),
-    ChangeColor(u8, u8, u8),
     Quit,
+    ChangeColor(i32, i32, i32),
 }
 
 impl Message {

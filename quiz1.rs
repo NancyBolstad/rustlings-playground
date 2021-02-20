@@ -9,13 +9,13 @@
 
 // Put your function here!
 // fn ..... {
-fn calculate_apple_price(quantity: u32) -> u32 {
-    let price = if quantity < 40 {
-        2
+
+fn calculate_apple_price(amount: i32) -> i32 {
+    if amount > 40 {
+        return amount * 1;
     } else {
-        1
-    };
-    quantity * price
+        return amount * 2;
+    }
 }
 
 // Don't modify this function!

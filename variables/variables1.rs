@@ -7,6 +7,8 @@
 // feel ready for the next exercise, remove the `I AM NOT DONE` comment below.
 
 fn main() {
-    let x = 5;
+    const x:u32 = 5;
     println!("x has the value {}", x);
+    let mut y:&str = "hello world";
+    println!("y has the value {}", y);
 }

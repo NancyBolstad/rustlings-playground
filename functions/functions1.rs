@@ -6,5 +6,5 @@ fn main() {
 }
 
 fn call_me() {
-    println!("hi there!");
+    println!("Called");
 }

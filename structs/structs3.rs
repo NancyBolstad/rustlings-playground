@@ -13,7 +13,7 @@ struct Package {
 impl Package {
     fn new(sender_country: String, recipient_country: String, weight_in_grams: i32) -> Package {
         if weight_in_grams <= 0 {
-            panic!("Package weight must be positive");
+            panic!("Weight is less than zero");
         } else {
             return Package {
                 sender_country,
@@ -24,11 +24,11 @@ impl Package {
     }
 
     fn is_international(&self) -> bool {
-        return self.sender_country != self.recipient_country;
+        &self.sender_country != &self.recipient_country
     }
 
     fn get_fees(&self, cents_per_gram: i32) -> i32 {
-        cents_per_gram * self.weight_in_grams
+        &self.weight_in_grams * cents_per_gram
     }
 }
 

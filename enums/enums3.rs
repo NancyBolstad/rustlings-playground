@@ -2,6 +2,7 @@
 // Address all the TODOs to make the tests pass!
 
 enum Message {
+    // TODO: implement the message variant types based on their usage below
     ChangeColor((u8, u8, u8)),
     Echo(String),
     Move(Point),
@@ -37,11 +38,16 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
+        // TODO: create a match expression to process the different message variants
+
         match message {
-            Message::ChangeColor(c) => self.color = c,
-            Message::Echo(msg) => println!("{}", msg),
-            Message::Move(p) => self.position = p,
-            Message::Quit => self.quit = true,
+            Message::ChangeColor((_a, _b, _c)) => self.change_color((_a, _b, _c)),
+            Message::Echo(_s) => self.echo(_s),
+            Message::Move(Point) => self.move_position(Point {
+                x: Point.x,
+                y: Point.y,
+            }),
+            Message::Quit => self.quit(),
         }
     }
 }
